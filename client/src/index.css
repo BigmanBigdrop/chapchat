@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    /* Dégradé noir semi-transparent */ url("../src/assets/bg.png"); /* Image de fond */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Styles personnalisés pour la barre de défilement dans les navigateurs WebKit (comme Chrome et Safari) */
+::-webkit-scrollbar {
+  width: 6px; /* Largeur de la barre */
+}
+
+::-webkit-scrollbar-track {
+  background: #555; /* Couleur de la barre */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #121212; /* Couleur du curseur */
+  border-radius: 5px; /* Arrondir les coins du curseur */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #242424; /* Couleur du curseur de défilement au hover */
+}
+
+/* Animation de secousse horizontale pour les éléments avec la classe "shake" */
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+  transform: translate3d(
+    0,
+    0,
+    0
+  ); /* Optimisation des performances avec transformation 3D */
+  backface-visibility: hidden; /* Assure que l'élément ne se déforme pas lors de l'animation */
+  perspective: 1000px; /* Perspective pour l'animation */
+}
+
+/* Définition des étapes de l'animation de secousse */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0); /* Déplacement vers la gauche */
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0); /* Déplacement vers la droite */
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0); /* Déplacement vers la gauche */
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0); /* Déplacement vers la droite */
+  }
+}
