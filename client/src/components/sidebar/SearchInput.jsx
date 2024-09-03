@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoSearchSharp } from "react-icons/io5"; // Icône pour le bouton de recherche
+import { IoSearchSharp } from "react-icons/io5"; 
 import useConversation from "../../zustand/useConversation"; // Hook pour obtenir et définir la conversation sélectionnée
 import useGetConversations from "../../hooks/useGetConversations"; // Hook pour obtenir les conversations
 import toast from "react-hot-toast"; // Bibliothèque pour les notifications toast

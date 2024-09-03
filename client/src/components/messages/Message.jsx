@@ -1,6 +1,6 @@
 import { useAuthContext } from "../../context/AuthContext"; // Contexte pour obtenir les informations de l'utilisateur authentifié
-import { extractTime } from "../../utils/extractTime"; // Fonction utilitaire pour formater l'heure
-import useConversation from "../../zustand/useConversation"; // Hook pour obtenir les détails de la conversation
+import { extractTime } from "../../utils/extractTime"; //formater l'heure
+import useConversation from "../../zustand/useConversation"; // Hook pour les détails de la conversation
 
 const Message = ({ message }) => {
   const { authUser } = useAuthContext(); // Obtient l'utilisateur authentifié
@@ -20,7 +20,7 @@ const Message = ({ message }) => {
       <div className="chat-image avatar">
         <div className="w-10 rounded-full">
           <img alt="Profile" src={photoDeProfil} />{" "}
-          {/* Affiche la photo de profil */}
+          {/* Affiche la photo de profil(A enlever dans Chapway) */}
         </div>
       </div>
       <div
