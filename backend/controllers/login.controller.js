@@ -1,4 +1,4 @@
-// Est cree chronologiquement apres le signup controller
+// Est crée chronologiquement apres le signup controller
 
 import User from "../models/user.model.js"; // Modèle utilisateur
 import bcryptjs from "bcryptjs";
